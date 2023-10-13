@@ -41,7 +41,7 @@ RUN dnf install -y dnf-plugins-core && \
     useradd -g test -d /home/test -m test && \
     install -d -o slurm -g slurm /etc/slurm /var/spool/slurm /var/log/slurm
 
-RUN dnf localinstall -y  /root/rpmbuild/RPMS/x86_64/slurm-devel-${SLURM_VER}*.el8.x86_64.rpm &&
+RUN dnf localinstall -y  /root/rpmbuild/RPMS/x86_64/slurm-devel-${SLURM_VER}*.el8.x86_64.rpm
 
 COPY supervisord.conf /etc/
 COPY --chown=slurm slurm.*.conf /etc/slurm/
