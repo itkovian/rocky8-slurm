@@ -13,7 +13,7 @@ RUN dnf install -y dnf-plugins-core && \
     dnf install -y epel-release && \
     dnf config-manager --set-enabled powertools && \
     dnf install -y \
-    cython \
+    python3-Cython \
     gcc \
     mailx \
     mariadb-devel \
