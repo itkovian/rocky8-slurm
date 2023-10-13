@@ -34,6 +34,7 @@ RUN dnf install -y dnf-plugins-core && \
     /root/rpmbuild/RPMS/x86_64/slurm-slurmdbd-${SLURM_VER}*.el8.x86_64.rpm \
     /root/rpmbuild/RPMS/x86_64/slurm-devel-${SLURM_VER}*.el8.x86_64.rpm && \
     dnf -y erase gcc mariab-devel make munge-devel pam-devel readline-devel rpm-build wget && \
+    dnf -y install cython && \
     dnf clean all && \
     rm -rf /root/rpmbuild /root/slurm*.tar.bz2 && \
     groupadd -r slurm && \
