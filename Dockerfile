@@ -11,7 +11,7 @@ ARG SLURM_VER=23.02.2
 RUN dnf install -y dnf-plugins-core && \
     dnf update -y && \
     dnf install -y epel-release && \
-    dnf config-manager --set-enabled powertools && \
+    dnf config-manager --set-enabled crb && \
     dnf install -y \
     python3-Cython \
     gcc \
