@@ -15,7 +15,7 @@ RUN dnf install -y dnf-plugins-core && \
     dnf install -y \
     python3-Cython \
     gcc \
-    mailx \
+    s-nail \
     mariadb-devel \
     mariadb-server \
     munge-devel \
