@@ -13,7 +13,6 @@ RUN dnf install -y dnf-plugins-core && \
     dnf install -y epel-release && \
     dnf config-manager --set-enabled crb && \
     dnf install -y \
-    python3-Cython \
     gcc \
     s-nail \
     mariadb-devel \
@@ -27,6 +26,7 @@ RUN dnf install -y dnf-plugins-core && \
     supervisor \
     tini \
     wget && \
+    pip install cython && \
     wget https://download.schedmd.com/slurm/slurm-${SLURM_VER}.tar.bz2 -O /root/slurm-${SLURM_VER}.tar.bz2 && \
     rpmbuild -tb /root/slurm-${SLURM_VER}.tar.bz2 && \
     dnf localinstall -y /root/rpmbuild/RPMS/x86_64/slurm-${SLURM_VER}*.el9.x86_64.rpm \
