@@ -1,8 +1,8 @@
-FROM rockylinux:8
+FROM rockylinux:9
 
 LABEL org.opencontainers.image.source="https://github.com/neilmunday/rocky8-slurm" \
-      org.opencontainers.image.description="A Rocky 8 Slurm container intended for testing Slurm" \
-      org.opencontainers.image.title="rocky8-slurm" \
+      org.opencontainers.image.description="A Rocky 9 Slurm container intended for testing Slurm" \
+      org.opencontainers.image.title="rocky9-slurm" \
       maintainer="Neil Munday"
 
 ARG SLURM_VER=23.02.2
