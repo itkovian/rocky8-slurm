@@ -21,12 +21,13 @@ RUN dnf install -y dnf-plugins-core && \
     pam-devel \
     perl \
     python3 \
+    python3-pip \
     readline-devel \
     rpm-build \
     supervisor \
     tini \
     wget && \
-    pip3 install cython && \
+    pip install cython && \
     wget https://download.schedmd.com/slurm/slurm-${SLURM_VER}.tar.bz2 -O /root/slurm-${SLURM_VER}.tar.bz2 && \
     rpmbuild -tb /root/slurm-${SLURM_VER}.tar.bz2 && \
     dnf localinstall -y /root/rpmbuild/RPMS/x86_64/slurm-${SLURM_VER}*.el9.x86_64.rpm \
